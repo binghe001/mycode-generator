@@ -7,6 +7,9 @@ QQ：2711098650
 # 项目简述
 mycode-generator项目为一款通用的Java代码生成神器，目前已完全开源。
 
+# 项目文档
+在项目的webapp/docs目录下有详细的项目文档。
+
 # mycode-generator项目版本经历
 ## 1.0.0
 本版是mycode-generatorJava通用代码生成器功能增强版1.0.0\<br>
@@ -127,6 +130,9 @@ mycode-generator项目为一款通用的Java代码生成神器，目前已完全
 6.部署时请首先使用Dynamic Web项目的wizard生成同名项目再把解压后源码包拷入即可编译。\<br>
 7.同时生成数据库建库脚本，保存在源码包sql子目录下。\<br>
 8.代码生成器不需要数据库后端，只需要将war部署于tomcat的webapps文件夹即可\<br>
+
+
+
 
 
 
