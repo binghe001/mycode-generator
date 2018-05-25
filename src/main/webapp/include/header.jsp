@@ -3,7 +3,7 @@
 <div id="header">
     <div id="logo">
         <h1><a href="../jsp/index.jsp">Infinity General Purpose Code Generator</a></h1>
-        <h2><a href="../jsp/index.jsp">Service public from 2014</a></h2>
+        <h2><a href="../jsp/index.jsp">Service public from 2018</a></h2>
     </div>
     <!-- end div#logo -->
     <!-- end div#menu -->

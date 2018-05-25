@@ -1,10 +1,13 @@
 package com.lyz.code.infinity.include;
 
+import java.util.Date;
+
 import com.lyz.code.infinity.domain.Include;
+import com.lyz.code.infinity.utils.DateUtils;
 
 public class Header extends Include{
 	protected String title = "InfinityGPG Generate Results";
-	protected String year = "2014";
+	protected String year = DateUtils.parseDateToString(new Date(), DateUtils.YEAR_FORMAT);
 	
 	public Header(){
 		super();
