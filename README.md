@@ -127,9 +127,9 @@ mycode-generator项目为一款通用的Java代码生成神器，目前已完全
 3.生成完整的Eclipse JEE版兼容的zip格式的压缩文件\<br>
 4.内置SGS脚本(标准生成器脚本)编译器\<br>
 5.部署请使用Java7和Tomcat7环境\<br>
-6.部署时请首先使用Dynamic Web项目的wizard生成同名项目再把解压后源码包拷入即可编译。\<br>
-7.同时生成数据库建库脚本，保存在源码包sql子目录下。\<br>
-8.代码生成器不需要数据库后端，只需要将war部署于tomcat的webapps文件夹即可\<br>
+6.部署时请首先使用Dynamic Web项目的wizard生成同名项目再把解压后源码包拷入即可编译。
+7.同时生成数据库建库脚本，保存在源码包sql子目录下。
+8.代码生成器不需要数据库后端，只需要将war部署于tomcat的webapps文件夹即可
 
 
 
