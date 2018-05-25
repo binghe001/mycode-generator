@@ -1,0 +1,125 @@
+project GenerateCallMagic{
+packagetoken:com.lyz.code.generatecallmagic;
+dbprefix:clc_;
+dbname:GenerateSample;
+dbusername:root;
+dbpassword:jerry;
+technicalstack:s2sh;
+
+domain Bonus {
+plural:Bonuses;
+domainid:id long;
+activefield:active boolean;
+domainname:bonusName String;
+field:empid long;
+field:userid long;
+field:reason String;
+field:bonusBalance double;
+field:description String; 
+}
+
+domain ClockRecord {
+domainid:id long;
+activefield:active boolean;
+domainname:clockRecordName String;
+field:empid long;
+field:userid long;
+field:timeStamp String;
+field:description String; 
+}
+
+domain EmployeeType {
+domainid:id long;
+activefield:active boolean;
+domainname:employeeTypeName String;
+field:description String; 
+}
+
+domain Fine {
+domainid:id long;
+activefield:active boolean;
+domainname:fineName String;
+field:empid long;
+field:userid long;
+field:reason String;
+field:fineBalance String;
+field:description String; 
+}
+
+domain Leave {
+domainid:id long;
+activefield:active boolean;
+domainname:leaveName String;
+field:empid long;
+field:userid long;
+field:day String;
+field:leaveTypeId long;
+field:description String; 
+}
+
+domain LeaveLeft {
+domainid:id long;
+activefield:active boolean;
+domainname:leaveLeftName String;
+field:empid long;
+field:userid long;
+field:annualLeaveLeft int;
+field:sickLeaveLeft int;
+field:privateLeaveLeft int;
+field:otherLeaveLeft int;
+field:year int;
+field:description String; 
+}
+
+domain LeaveLimit {
+domainid:id long;
+activefield:active boolean;
+domainname:leaveLimitName String;
+field:employeeTypeId long;
+field:annualLeaveLimit int;
+field:sickLeaveLimit int;
+field:privateLeaveLimit int;
+field:otherLeaveLimit int;
+field:description String; 
+}
+
+domain LeaveType {
+domainid:id long;
+activefield:active boolean;
+domainname:leaveTypeName String;
+field:unitFine String;
+field:description String; 
+}
+
+domain Privilege {
+domainid:id long;
+activefield:active boolean;
+domainname:privilegeName String;
+field:url String; 
+field:isadmin boolean; 
+field:canDelete boolean; 
+}
+
+domain User {
+domainid:id long;
+activefield:active boolean;
+domainname:username String;
+field:empid long;
+field:firstname String;
+field:lastname String; 
+field:password String; 
+field:gender String; 
+field:isadmin boolean; 
+field:salt String;
+field:loginfailure int;
+field:namec String;
+field:address String;
+field:address1 String;
+field:phone String ;
+field:mobile String;
+field:confirmpassword String;
+}
+
+call magic;
+}
+	

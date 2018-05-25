@@ -1,0 +1,5 @@
+Infinity 0.7.11 Roadmap
+
+UpdateAll Verb
+Jsp interface modify to JSON UI standard
+openSession issue

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Infinity General Purpose Code Generator</title>
+        <link href="../css/default.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    </head>   
+    <body onload="setGenerateSampleDemo()">
+        <div id="wrapper">
+        <div id="header">
+    <div id="logo">
+        <h1><a href="../html/index.html">Java通用代码生成器</a></h1>
+        <h2><a href="../html/index.html">Java大神带你进行神一样的操作</a></h2>
+    </div>
+    <!-- end div#logo -->
+    <!-- end div#menu -->
+</div>
+            <!-- end div#header -->
+            <div id="page">
+                <div style="text-align:center" id="content">
+                    <div id="welcome">
+                        <h2></h2>
+                        <!-- Fetch Rows -->                        
+                        <div style="float:left;font-size:12pt">生成结果:</div>
+                        <div id="generateResults"></div>
+                        <div style="clear:both"></div>
+                        <br/><br/><br/>
+                        
+						<div style="float:left;font-size:12pt">SGS代码输入窗口：</div>
+						<form id="codeForm" action="" method="post">
+                        <textarea id="mycode" name="mycode" cols="80" rows="60" style="width:600px">
+						</textarea><br/>
+						<input type="checkbox" id="ignoreWarning" name="ignoreWarning" value="true" checked="false"/>忽略编译警告
+						<br/><br/>
+                        <input type="button" value="生成代码" onclick="submitCode();"/><input type="reset" value="重置"/>
+                        </form>     
+                    </div>
+                    <!-- end div#welcome -->
+                </div>
+                <!-- end div#content -->
+                <div id="sidebar">
+                    <!--ul-->
+                    	<!-- Common Navigation Panel for our site -->
+						<li id="submenu">
+						    <h2>功能菜单</h2>
+						    <ul>
+						      <li><a href="javascript:setGenerateSampleDemo()">GenerateSample示例</a></li>
+						      <li><a href="javascript:setGenerateS2SHDemo()">GenerateS2SH示例</a></li>
+						      <li><a href="javascript:setGenerateS2SHCDemo()">GenerateS2SHC示例</a></li>
+						      <li><a href="javascript:setGenerateIntegerDemo()">整数作序号示例</a></li>
+						      <li><a href="javascript:setGenerateIntegerSimpleJEEDemo()">整数作序号示例SimpleJEE版</a></li>
+						      <li><a href="javascript:setGenerateCallMagicDemo()">魔法语句示例</a></li>
+						      <li><a href="javascript:setGenerateCallMagicSimpleJEEDemo()">魔法语句示例SimpleJEE版</a></li>
+						      <li><a href="javascript:setGenerateInverseDemo()">软删除反义示例</a></li>
+						      <li><a href="javascript:setGenerateInverseSimpleJEEDemo()">软删除反义示例SimpleJEE版</a></li>
+        						<li><a href="javascript:setGenerateAdvanceDemo()">先进特性示例</a></li>
+        						<li><a href="javascript:setEmployeeDemo()">EmployeeTest示例</a></li>
+        						<li><a href="javascript:setUserSystemsDemo()">用户系统示例</a></li>
+        						<li><a href="javascript:setMyAreasDemo()">场馆管理系统示例</a></li>
+        						<li><a href="javascript:setMySportsDemo()">运动示例</a></li>
+        						<li><a href="javascript:setMyProjectDemo()">项目管理示例</a></li>
+        						<li><a href="javascript:setReadme()">阅读说明</a></li>
+        						<li><a href="../docs/Mycode-generator_Install.pdf">安装文档</a></li>
+        						<li><a href="../docs/Mycode-generator_UserManual_1.0.0.pdf">用户手册</a></li>
+        						<li><a href="../docs/Infinity_Theory.ppt">本生成器理论</a></li>
+						    		<li><a href="../docs/Attachments.zip">生成器杂项理论</a></li>
+						    		<li><a href="../docs/Mycode-generator_simple.zip">神秘礼物</a></li>
+						    </ul>
+						</li>
+                    <!--/ul-->
+                </div>
+                <!-- end div#sidebar -->
+                <div style="clear: both; height: 1px"></div>
+            </div>
+            <!-- Common footer for our site -->
+			<div id="footer">
+			    <p id="legal">作者：Adam Lu(刘亚壮)<br/>
+			    </p>
+			</div>
+        </div>
+        <!-- end div#wrapper -->
+<script type="text/javascript">
+function submitCode(){
+	$("#generateResults").html("");
+	var ignoreWaring = $("#ignoreWarning").get(0).checked;
+	$.ajax({
+        type: "post",
+        url: "../facade/generateSampleCodeFacade",
+        data: {code:$("#mycode").val(),ignoreWarning:ignoreWaring},
+        dataType: 'json',
+        success: function(data, textStatus) {
+					debugger;
+           if (data.success == true){
+           		$("#generateResults").html("<strong>"+data.projectName+"</strong><a href=\"../source/"+data.projectName+".zip\">Download</a>");
+           }else if (data.success == false){
+        	   var resultStr = "<span style='color:red;font-size:16pt''>";
+        	   for (var i = 0; i < data.compileErrors.length;i++){
+        		   resultStr += data.compileErrors[i];
+        		   resultStr += "<br/>"
+        	 		  }   
+        	   if (data.compileErrors.length > 0) resultStr += "</span>";
+        	   resultStr += "<br/><span style='color:#cd740c;font-size:16pt'>";    	   		 
+        	   for (var i = 0; i < data.compileWarnings.length;i++){
+        		   resultStr += data.compileWarnings[i];
+        		   resultStr += "<br/>"
+        	 		  }
+        	   if (data.compileWarnings.length > 0) resultStr += "</span>";
+        	   $("#generateResults").html(resultStr);
+           }
+        },
+        complete : function(XMLHttpRequest, textStatus) {
+        
+		},
+		error : function(XMLHttpRequest,textStatus,errorThrown) {
+			//alert("Error:"+textStatus);
+			//alert(errorThrown.toString());
+		}
+    });	
+}
+
+function Write2Text(filename)
+{
+	var fso = new ActiveXObject("Scripting.FileSystemObject");
+	var f = fso.CreateTextFile(filename, true);
+	for(var i=0;i<arr.length;i++)
+	{
+	f.write(arr[i])
+	f.WriteBlankLines(1)
+	}
+	f.Close();
+}
+
+function setEmployeeDemo(){
+	readText("employeetest.sgs")
+}
+
+function setMyAreasDemo(){
+	readText("myareas.sgs")
+}
+
+function setMySportsDemo(){
+	readText("mysports.sgs")
+}
+
+function readText(myfilename){
+	$("#generateResults").html("");
+	$.ajax({
+        type: "get",
+        url: "../facade/readSgsFileFacade",
+        data: {filename:myfilename},
+        dataType: 'text',
+        success: function(data, textStatus) {
+           //alert(data);
+           if ( data != null & data!="")
+           		$("#mycode").val(data);
+        },
+        complete : function(XMLHttpRequest, textStatus) {
+        
+		},
+		error : function(XMLHttpRequest,textStatus,errorThrown) {
+			alert("Error:"+textStatus);
+			//alert(errorThrown.toString());
+		}
+    });	 
+}
+
+function readDocs(myfilename){
+	$.ajax({
+        type: "post",
+        url: "../facade/readDocsFileFacade",
+        data: {filename:myfilename},
+        dataType: 'text',
+        success: function(data, textStatus) {
+           //alert(data);
+           if ( data != null & data!="")
+           		$("#mycode").val(data);
+        },
+        complete : function(XMLHttpRequest, textStatus) {
+        
+		},
+		error : function(XMLHttpRequest,textStatus,errorThrown) {
+			alert("Error:"+textStatus);
+			//alert(errorThrown.toString());
+		}
+    });	 
+}
+
+function setGenerateSampleDemo(){
+	readText("GenerateSample.sgs")
+}
+
+function setGenerateS2SHDemo(){
+	readText("GenerateS2SH.sgs")
+}
+
+function setGenerateS2SHCDemo(){
+	readText("GenerateS2SHC.sgs")
+}
+
+function setGenerateIntegerDemo(){
+	readText("GenerateInteger.sgs")
+}
+
+function setGenerateInverseDemo(){
+	readText("GenerateInverse.sgs")
+}
+
+function setGenerateInverseSimpleJEEDemo(){
+	readText("GenerateInverseSimpleJEE.sgs")
+}
+
+function setGenerateIntegerSimpleJEEDemo(){
+	readText("GenerateIntegerSimpleJEE.sgs")
+}
+
+function setGenerateAdvanceDemo(){
+	readText("GenerateAdvance.sgs")
+}
+
+
+function setGenerateCallMagicDemo(){
+	readText("GenerateCallMagic.sgs")
+}
+
+function setGenerateCallMagicSimpleJEEDemo(){
+	readText("GenerateCallMagicSimplejee.sgs")
+}
+
+function setUserSystemsDemo(){
+	readText("usersystems.sgs")
+}
+
+function setMyProjectDemo(){
+	readText("myproject.sgs")
+}
+
+function setReadme(){
+	readDocs("Readme.txt")
+}
+</script>        
+    </body>
+</html>

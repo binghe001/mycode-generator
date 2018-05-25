@@ -1,0 +1,11 @@
+1)S2SH栈，翻页功能有问题，可能是页面计数问题[已修正]
+2)S2SH栈，跳页会跳出有数据的范围，需修正[已修正]
+3)mysql生成器 加标注 /*!40100 COLLATE 'utf8_general_ci' */[已修正]
+4)SimpleJEE栈搜索，空白搜索后再翻页无数据，JsonUI是好的。jsp Interface有问题。S2SH栈有同样问题。Jsp Interface会抛错。[已修正]
+5)S2SH栈，Json UI DeleteAll后刷新界面
+6)S2SH栈，Json UI 新增后跳到最后并刷新界面
+7)Jsp Interface　新增后是ListAll动词 [已修正]
+8) OpenSession　和 getCurrentSession问题[暂不处理]
+9) 新增关键字 dbname [已完成]
+10) S2SH 栈 dbname 不起作用 [已修正]
+11) S2SH 栈 没有显示数据 [已修正]

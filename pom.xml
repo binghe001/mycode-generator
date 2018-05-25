@@ -1,0 +1,291 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.lyz.code</groupId>
+  <artifactId>mycode-generator</artifactId>
+  <packaging>war</packaging>
+  <version>1.0.0</version>
+  <name>mycode-generator</name>
+  <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>1.8</jdk.version>
+  </properties>
+  <dependencies>
+  
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>bsh-core</artifactId>
+			<version>2.0b4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.1_3-src</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>cglib-nodep</artifactId>
+			<version>2.1_3</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.6</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.5</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.3</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>ezmorph</artifactId>
+			<version>1.0.6</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>fluent-hc</artifactId>
+			<version>4.3.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>hamcrest-core</artifactId>
+			<version>1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>hamcrest-library</artifactId>
+			<version>1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.3.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>httpclient-cache</artifactId>
+			<version>4.3.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>4.3</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.3.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>httpunit</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>jmock</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>jmock-junit3</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>jmock-junit4</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>jmock-legacy</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>jmock-script</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>js</artifactId>
+			<version>1.6R5</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>json-lib-2.4-jdk15</artifactId>
+			<version>2.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>jtidy-4aug2000r7-dev</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>junit3</artifactId>
+			<version>3.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>junitee-anttask</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>junitee</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.27</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.7</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>nekohtml</artifactId>
+			<version>0.9.5</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>objenesis</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lyz</groupId>
+			<artifactId>xmlParserAPIs</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+		
+		
+  </dependencies>
+  
+  <build>
+  
+    <finalName>mycode-generator</finalName>
+    <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+		
+		 <resources>
+			<!-- 指定 src/main/resources下所有文件及文件夹为资源文件 -->
+			<resource>
+				<directory>src/main/resources</directory>
+				<targetPath>${project.build.directory}/classes</targetPath>
+				<includes>
+					<include>**/*</include>
+				</includes>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+  </build>
+</project>

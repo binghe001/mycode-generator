@@ -1,0 +1,6 @@
+Infinity 0.7.18 Roadmap
+
+1.官方中文版
+2.中文界面 Y
+3.中文提示，包括编译错和编译警告 Y
+4.simplejee技术栈新增别名clocksimplejee Y

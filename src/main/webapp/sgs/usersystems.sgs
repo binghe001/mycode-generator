@@ -1,0 +1,138 @@
+project UserSystems{
+packagetoken:org.usersystems;
+dbprefix:adp_;
+dbusername:root;
+dbpassword:jerry;
+technicalstack:jsp;
+
+domain User {
+domainid:userid long;
+activefield:active boolean;
+domainname:username String;
+field:empid String
+field:password long;
+field:email String;
+field:bonusBalance String;
+field:lastLogin String; 
+field:status String;
+field:type String;
+field:gender String;
+field:birthday String;
+field:nativePlace String;
+field:identityCard String;
+field:nation String;
+field:jobTitle String;
+field:maritalStatus String;
+field:enterDate String;
+field:graduateSchool String;
+field:graduateTime String;
+field:major String;
+field:politicalStatus String;
+field:education String;
+field:academicDegree String;
+field:mobilePhone String;
+field:mobilePhoneExtension String;
+field:probationaryPartyMember String;
+field:joinPartyDate String;
+field:probationEndDate String;
+field:branchResponsibility String;
+}
+
+domain UserGroup {
+domainid:userGroupId long;
+activefield:active boolean;
+domainname:userGroupName String;
+field:description String;
+field:mark int;
+}
+
+domain Department {
+domainid:departmentId long;
+activefield:active boolean;
+domainname:departmentName String;
+field:description String;
+field:status String;
+field:order int;
+field:upsID String;
+}
+
+domain Dictionary {
+plural:Dictionaries;
+domainid:dictionaryId long;
+activefield:active boolean;
+domainname:dictionaryName String;
+field:value String;
+field:type String;
+field:format String;
+field:updateBy String;
+}
+
+domain Permission {
+domainid:permissionId long;
+activefield:active boolean;
+domainname:permissionName String;
+field:pId String;
+}
+
+domain Project {
+domainid:projectId long;
+activefield:active boolean;
+domainname:projectName String;
+field:softwareCode String;
+field:softwareName String;
+field:softwareResponsibleUserId long;
+field:departmentId long;
+field:startDate String;
+field:endDate String;
+field:duration int;
+field:softwareStatusId long;
+field:description String;
+field:workHours double;
+field:code String;
+field:responsibleUserId long;
+field:categoryId long;
+field:statusId long;
+field:startTime String;
+field:isClosed String;
+field:library String;
+field:creatorId long;
+}
+
+
+domain Role {
+domainid:roleId long;
+activefield:active boolean;
+domainname:roleName String;
+field:type String;
+field:description String;
+}
+
+prism UserPrism{
+prismdomain:User;
+}
+
+prism UserGroupPrism{
+prismdomain:UserGroup;
+}
+
+prism DepartmentPrism{
+prismdomain:Department;
+}
+
+prism DictionaryPrism{
+prismdomain:Dictionary;
+}
+
+prism PermissionPrism{
+prismdomain:Permission;
+}
+
+prism ProjectPrism{
+prismdomain:Project;
+}
+
+prism RolePrism{
+prismdomain:Role;
+}
+}
+						

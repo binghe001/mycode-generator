@@ -1,0 +1,35 @@
+project EmployeeTest {
+packagetoken:com.lyz.code.employeetest;
+dbprefix:emp_;
+dbusername:root;
+dbpassword:jerry;
+technicalstack:s2sh;
+
+domain Employee {
+plural:Employee;
+domainid:employeeId long;
+field:gender String;
+field:age int;
+field:employeeDescription String;
+field:employeeComment String;
+field:content String;
+activefield:active boolean;
+domainname:employeeName String;
+}
+domain User {
+domainid:userId long;
+field:gender String;
+field:age int;
+field:userDescription String;
+field:userComment String;
+field:content String;
+activefield:active boolean;
+domainname:userName String;
+}
+prism EmployeePrism{
+prismdomain:Employee;
+}
+prism UserPrism{
+prismdomain:User;
+}
+}

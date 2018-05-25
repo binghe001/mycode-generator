@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configenv>
+<datasource>
+	
+	<!-- 存储工程的基础信息 -->
+	<dburl>jdbc:mysql://localhost:3306/</dburl>
+	<dbname>lyz_code_generator</dbname>
+	<username>root</username>
+	<password>root</password>
+	
+	<!-- 需要导出信息的数据库 -->
+	<testdburl>jdbc:mysql://localhost:3306/</testdburl>
+	<testdbname>lyz_infinity</testdbname>
+	<testusername>root</testusername>
+	<testpassword>root</testpassword>
+	
+	<isnottest>true</isnottest>
+	<isproductprotectlockoffline>true</isproductprotectlockoffline>
+	<istestsuiteoffline>false</istestsuiteoffline>
+	<isgpinterfaceoffline>false</isgpinterfaceoffline>
+	
+	</datasource>
+</configenv>

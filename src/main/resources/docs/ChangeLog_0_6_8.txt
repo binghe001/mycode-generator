@@ -1,0 +1,2 @@
+1)修复大写连写的数据库表命名
+2)修复CountPage的id命名的countNum

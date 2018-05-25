@@ -1,0 +1,19 @@
+SpringJPAj技术栈
+SGS1.5伪上下文相关文法
+SGS解释器
+SGS Shell
+自动Testcase生成
+新的JQuery动词格
+编译警告增强
+新的编译前置条件
+一对一，一对多和多对多
+AngularJS和Bootstrap JSON界面
+支持Date,Timestamp字段
+支持对象属性字段
+
+SGS 1.5 wishes
+addVerb(updateAll)
+addVerb(searchByComment(Field myComment))
+removeVerb(updateAll)
+standardVerbSet
+fullVerbSet

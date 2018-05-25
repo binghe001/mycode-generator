@@ -1,0 +1,6 @@
+InfinityGPGenerator 0.8 Vision
+1)TestCase
+2)UpdateAll
+3)SGS1.5
+4)SpringJPA stack
+5)OpenSession issue

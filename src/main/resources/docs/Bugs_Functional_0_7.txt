@@ -1,0 +1,22 @@
+1.在Fedora18,jar包拷贝出错【已修复】
+2.需要新增两个动词DeleteAll和SoftDeleteAll【已完成】
+3.是否要区分StandardVerbSet和ExtendedVerbSet【0.8特性】
+4.searchByNameFacade缺json输出【已修复】
+5.jsonUI缺ListAllByPage JS函数【已修复】
+6.jsonUI generateDataRows缺data参数【已修复】
+7.jsonUI DocumentReady 两个参数是整数【已修复】
+8.jsonUI OpRow 上的UpdateAll方法命名错误【已修复】
+9.jsonUI 去除java标签【已修复】
+10.jspUI Colspan和列对齐问题，包括AddRow的对齐问题【已修复】
+11.jsonUI 翻页问题,在GenerateSample样例上已实现，需引入模板【已修复】
+12.jspUI checkboxes和deleteAll, softDeleteAll and updateAll和jsonUI同步【0.7.11特性】
+13. S2SH栈，表名一律小写，SQL生成器保持一致【已修复】
+14. JsonUI facade有Domain前缀【不是这么回事，已处理】
+15. 正在修复JsonUI for S2SH【已修复】
+16. S2SH栈缺DeleteAll动词【已修复】
+17. S2SH栈缺SoftDeleteAll动词【已修复】
+18. 关键字emptypassword【已修复】
+19. 翻页的pagecount的计数有误，S2SH中【已修复】
+20. jsp interface jump有误, 现在已在GenerateSample3中修复，需移植【已修复】
+21. 生成的Mysql脚本中附带UTF-8编码指定【已修复】
+22. 新增dbname关键字

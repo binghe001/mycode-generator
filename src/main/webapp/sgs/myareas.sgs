@@ -1,0 +1,109 @@
+project MyAreas{
+packagetoken:com.lyz.code.myareas;
+dbprefix:std_;
+technicalstack:s2sh;
+
+domain User {
+domainid:userId long;
+activefield:active boolean;
+domainname:loginName String;
+field:gender String;
+field:mobile String;
+field:mobilePublic String;
+field:QQ String; 
+field:weixin String;
+field:weibo String;
+field:nickName String;
+field:realName String;
+field:type int;
+field:password String;
+field:startDate String;
+field:level int;
+field:creditLevel int;
+field:comment double;
+field:birthday String;
+field:normalAddress String;
+field:description String;
+field:feeLevel int;
+field:tokenId String;
+field:latitude double;
+field:longitude double;
+field:cityId long;
+}
+
+domain Stadium {
+domainid:stadiumId long;
+activefield:active boolean;
+domainname:stadiumName String;
+field:comment double;
+field:opentime String;
+field:latitude double;
+field:longitude double;
+field:telephone String;
+field:detail String;
+field:canPark String;
+field:canSell String;
+field:canRest String;
+field:canRent String;
+field:canCard String;
+field:canBath String;
+field:canLongBuy String;
+field:ballType int;
+field:stadiumType int;
+field:cityId long;
+}
+
+domain StadiumPicture {
+domainid:stadiumPictureId long;
+activefield:active boolean;
+domainname:stadiumPictureName String;
+field:stadiumId long;
+field:picture String;
+}
+
+domain StadiumArea {
+domainid:stadiumAreaId long;
+activefield:active boolean;
+domainname:stadiumAreaName String;
+field:stadiumId long;
+field:timeId long;
+field:startTime String;
+field:endTime String;
+field:fee double;
+field:otherFee double;
+field:state int; 
+}
+
+domain StadiumComment {
+domainid:stadiumCommentId long;
+activefield:active boolean;
+domainname:stadiumCommentName String;
+field:stadiumId long;
+field:userId long;
+field:createTime String;
+field:star int;
+field:comments String;
+}
+
+prism UserPrism{
+prismdomain:User;
+}
+
+prism StadiumPrism{
+prismdomain:Stadium;
+}
+
+prism StadiumPicturePrism{
+prismdomain:StadiumPicture;
+}
+
+prism StadiumAreaPrism{
+prismdomain:StadiumArea;
+}
+
+prism StadiumCommentPrism{
+prismdomain:StadiumComment;
+}
+}
+
+

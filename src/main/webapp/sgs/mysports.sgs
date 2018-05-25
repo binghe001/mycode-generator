@@ -1,0 +1,291 @@
+project MySports {
+packagetoken:com.lyz.code.mysports;
+dbprefix:mspt_;
+technicalstack:s2sh;
+
+domain User {
+domainid:userId long;
+activefield:active boolean;
+domainname:userName String;
+field:gender String;
+field:mobile String;
+field:mobilePublic String;
+field:QQ String; 
+field:weixin String;
+field:weibo String;
+field:nickName String;
+field:realName String;
+field:type int;
+field:password String;
+field:startDate String;
+field:level int;
+field:creditLevel int;
+field:comment double;
+field:birthday String;
+field:normalAddress String;
+field:description String;
+field:feeLevel int;
+field:tokenId String;
+field:latitude double;
+field:longitude double;
+}
+
+domain UserPicture {
+domainid:userPictureId long;
+activefield:active boolean;
+domainname:userPictureeName String;
+field:userId long;
+field:type int;
+field:detail String;
+field:remarks String;
+}
+
+domain UserDelivery {
+domainid:userDeliveryId long;
+activefield:active boolean;
+domainname:userDeliveryName String;
+field:userId long;
+field:receiveName String;
+field:province long;
+field:city long;
+field:address String;
+field:postcode String;
+field:telephone String;
+field:normal String;
+}
+
+domain UserRelation {
+domainid:userRelationId long;
+activefield:active boolean;
+domainname:userRelationName String;
+field:userId long;
+field:relationType int;
+}
+
+domain UserComment {
+domainid:userCommentId long;
+activefield:active boolean;
+domainname:userCommentName String;
+field:userId long;
+field:objectUserId long;
+field:createTime String;
+field:star String;
+field:comments String;
+}
+
+domain Order {
+domainid:orderId long;
+activefield:active boolean;
+domainname:orderName String;
+field:userId long;
+field:deliveryId long;
+field:objectType int;
+field:totalPrice double;
+field:createTime String; 
+field:remarks String;
+field:state int;
+}
+
+domain OrderObject {
+domainid:orderObjectId long;
+activefield:active boolean;
+domainname:orderObjectName String;
+field:orderId long;
+field:price double;
+field:comment boolean;
+}
+
+domain Transaction {
+domainid:transactionId long;
+activefield:active boolean;
+domainname:transactionName String;
+field:fee double;
+field:fromUserId long;
+field:toUserId long;
+field:transType int;
+field:orderObjectId long;
+field:transId String;
+field:createTime String;
+}
+
+
+domain Product {
+domainid:productId long;
+activefield:active boolean;
+domainname:productName String;
+field:brand String;
+field:productType int;
+field:productKind long;
+field:orgPrice double; 
+field:disPrice double;
+field:chengSe String;
+field:detail String;
+field:state int;
+}
+
+domain ProductPicture {
+plural:ProductPicture;
+domainid:productPictureId long;
+activefield:active boolean;
+domainname:productPictureName String;
+field:detail String;
+field:remarks String;
+}
+
+domain ProductComment {
+domainid:productCommentId long;
+activefield:active boolean;
+domainname:productCommentName String;
+field:userId long;
+field:orderId long;
+field:productId long;
+field:createTime String;
+field:star int;
+field:comments String;
+}
+
+domain Order {
+domainid:orderId long;
+activefield:active boolean;
+domainname:orderName String;
+field:userId long;
+field:deliveryId long;
+field:objectType int;
+field:totalPrice double;
+field:createTime String; 
+field:remarks String;
+field:state int;
+}
+
+domain OrderObject {
+domainid:orderObjectId long;
+activefield:active boolean;
+domainname:orderObjectName String;
+field:orderId long;
+field:price double;
+field:comment boolean;
+}
+
+domain Transaction {
+domainid:transactionId long;
+activefield:active boolean;
+domainname:transactionName String;
+field:fee double;
+field:fromUserId long;
+field:toUserId long;
+field:transType int;
+field:orderObjectId long;
+field:transId String;
+field:createTime String;
+}
+
+
+domain Activity {
+plural:Activities;
+domainid:activityId long;
+activefield:active boolean;
+domainname:activityName String;
+field:joinEndDate String;
+field:limitCount int;
+field:confirmCount int;
+field:activityDetail String; 
+field:free boolean;
+field:fee double;
+field:payType int;
+field:relationTel String;
+field:createTime String;
+field:cityId long;
+}
+
+domain Train{
+plural:Train;
+domainid:trainId long;
+activefield:active boolean;
+domainname:trainName String;
+field:detail String;
+field:remarks String;
+}
+
+domain ProductComment {
+domainid:productCommentId long;
+activefield:active boolean;
+domainname:productCommentName String;
+field:userId long;
+field:orderId long;
+field:productId long;
+field:createTime String;
+field:star int;
+field:comments String;
+}
+
+prism UserPrism{
+prismdomain:User;
+}
+
+prism UserPicturePrism{
+prismdomain:UserPicture;
+}
+
+prism UserDeliveryPrism{
+prismdomain:UserDelivery;
+}
+
+prism UserRelationPrism{
+prismdomain:UserRelation;
+}
+
+prism UserCommentPrism{
+prismdomain:UserComment;
+}
+
+prism OrderPrism{
+prismdomain:Order;
+}
+
+prism OrderObjectPrism{
+prismdomain:OrderObject;
+}
+
+prism TransactionPrism{
+prismdomain:Transaction;
+}
+
+
+prism ProductPrism{
+prismdomain:Product;
+}
+
+prism ProductPicturePrism{
+prismdomain:ProductPicture;
+}
+
+prism ProductCommentPrism{
+prismdomain:ProductComment;
+}
+
+prism OrderPrism{
+prismdomain:Order;
+}
+
+prism OrderObjectPrism{
+prismdomain:OrderObject;
+}
+
+prism TransactionPrism{
+prismdomain:Transaction;
+}
+
+prism ProductPrism{
+prismdomain:Product;
+}
+
+prism ProductPicturePrism{
+prismdomain:ProductPicture;
+}
+
+prism ProductCommentPrism{
+prismdomain:ProductComment;
+}
+}
+
+

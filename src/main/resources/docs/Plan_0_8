@@ -1,0 +1,16 @@
+1.Code name:Trinity 崔妮蒂
+2.支持自动生成TestCase
+3.新SpringJPA技术栈【挂起】
+4.生成完整格式的Eclipse JEE源码包
+5.上下文相关语法的SGS1.5编译器
+6.支持BigDecimal
+7.支持Date
+8.支持Timestamp
+9.支持Facade(json)动词格【已完成】
+10.数据库表名支持两种风格，连字号和Camel式
+11.缩进美化
+12.数据库字段名支持两种风格，连字号和Camel式
+13.基本数据类型包装类的支持
+14.JSON Facade界面【已完成】
+15.关键字emptypassword【已完成】
+16.新的SpringMybatis技术栈

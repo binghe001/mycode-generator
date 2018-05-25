@@ -1,0 +1,7 @@
+Infinity 0.7.17 Roadmap
+
+1.括号检查 Y
+2.domain和prism名称检查 Y
+3.web.xml空行 Y
+4.翻页功能Bug和功能检查
+5.编译错和编译警告更新

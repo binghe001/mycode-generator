@@ -1,0 +1,4 @@
+1)Domain field lack issue fixed.
+2)Controller name wrongly used plural issue fixed.
+3)Some compile issue in the source template fixed.(Todo)
+4)Service, ServiceImpl, Dao, DaoImpl used plural issue fixed.(Todo)
